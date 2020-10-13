@@ -20,8 +20,8 @@ class VAE(tf.keras.Model):
           [
             tf.keras.layers.InputLayer(input_shape=(28, 28, 1)),
             tf.keras.layers.Flatten(),
-            tf.keras.layers.Dense(128,activation='relu'),
-            tf.keras.layers.Dense(64),
+            tf.keras.layers.Dense(128, activation='relu'),
+            tf.keras.layers.Dense(64, activation='relu'),
             tf.keras.layers.Dense(latent_dim + latent_dim),
           ]
         )
@@ -30,9 +30,9 @@ class VAE(tf.keras.Model):
         self.decoder = tf.keras.Sequential(
           [
             tf.keras.layers.InputLayer(input_shape=(latent_dim)),
-            tf.keras.layers.Dense(64),
-            tf.keras.layers.Dense(128),
-            tf.keras.layers.Dense(784),
+            tf.keras.layers.Dense(64, activation='relu'),
+            tf.keras.layers.Dense(128, activation='relu'),
+            tf.keras.layers.Dense(784, activation='relu'),
             tf.keras.layers.Reshape(target_shape=(28, 28, 1)),
           ]
         )
