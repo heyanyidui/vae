@@ -12,7 +12,7 @@ Original file is located at
 
 * reparameterize
    
-  计算 z=￥\mu + \sigma \odot \varepsilon$
+  计算 z=$\mu + \sigma \odot \varepsilon$
 * log_normal_pdf
 
   计算 log p(x|z) = $\sum{ (sample-\mu)^2 \over {2 \sigma^2}}+\log(\sqrt{2\pi}\ \sigma )$
